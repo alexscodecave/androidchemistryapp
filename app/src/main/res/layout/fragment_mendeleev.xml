@@ -5,9 +5,13 @@
     tools:context="com.example.alexb.chemistryapplication.mendeleev">
 
     <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/dmitrimendeleev"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Page about mendeleev" />
+        android:layout_height="wrap_content" />
 
 </FrameLayout>

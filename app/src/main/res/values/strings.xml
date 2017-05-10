@@ -21,16 +21,6 @@
         <item>Cs</item>
         <item>Fr</item>
     </string-array>
-    <string-array name="grouponedetails">
-
-        <item>1</item>
-        <item>3</item>
-        <item>11</item>
-        <item>19</item>
-        <item>37</item>
-        <item>55</item>
-        <item>87</item>
-    </string-array>
 
     <string-array name="grouptwoelements">
         <item>Be</item>
@@ -41,7 +31,6 @@
         <item>Ra</item>
     </string-array>
     <string-array name="groupthreeelements">
-        <item></item>
         <item>Sc</item>
         <item>Y</item>
         <item>La</item>
@@ -107,6 +96,51 @@
         <item>Cd</item>
         <item>Hg</item>
     </string-array>
+    <string-array name="groupthirteenelements">
+        <item>B</item>
+        <item>Al</item>
+        <item>Ga</item>
+        <item>In</item>
+        <item>TI</item>
+    </string-array>
+    <string-array name="groupfourteenelements">
+        <item>C</item>
+        <item>Si</item>
+        <item>Ge</item>
+        <item>Sn</item>
+        <item>Pb</item>
+    </string-array>
+    <string-array name="groupfifteenelements">
+        <item>N</item>
+        <item>P</item>
+        <item>As</item>
+        <item>Sb</item>
+        <item>Bi</item>
+    </string-array>
+    <string-array name="groupsixteenelements">
+        <item>O</item>
+        <item>S</item>
+        <item>Se</item>
+        <item>Te</item>
+        <item>Po</item>
+    </string-array>
+    <string-array name="groupseventeenelements">
+        <item>F</item>
+        <item>CI</item>
+        <item>Br</item>
+        <item>I</item>
+        <item>At</item>
+    </string-array>
+    <string-array name="groupeighteenelements">
+        <item>He2</item>
+        <item>Ne</item>
+        <item>Ar</item>
+        <item>Kr</item>
+        <item>Xe</item>
+        <item>Rn</item>
+    </string-array>
+
+
 
     <string-array name="groupHalogens">
         <item>F</item>
@@ -123,6 +157,8 @@
         <item>Xe</item>
         <item>Rn</item>
     </string-array>
+
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

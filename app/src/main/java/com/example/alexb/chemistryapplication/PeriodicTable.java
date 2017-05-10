@@ -3,6 +3,7 @@ package com.example.alexb.chemistryapplication;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,13 @@ public class PeriodicTable extends FragmentActivity {
     private ListView listViewGroupNine;
     private ListView listViewGroupTen;
     private ListView listViewGroupEleven;
+    private ListView listViewGroupTwelve;
+    private ListView listViewGroupThirteen;
+    private ListView listViewGroupFourteen;
+    private ListView listViewGroupFifteen;
+    private ListView listViewGroupSixteen;
+    private ListView listViewGroupSeventeen;
+    private ListView listViewGroupEighteen;
     private ImageView imgView;
 
     private String[] groupOneElements; //private string array
@@ -41,9 +49,17 @@ public class PeriodicTable extends FragmentActivity {
     private String[] groupNineElements;
     private String[] groupTenElements;
     private String[] groupElevenElements;
+    private String[] groupTwelveElements;
+    private String[] groupThirteenElements;
+    private String[] groupFourteenElements;
+    private String[] groupFifteenElements;
+    private String[] groupSixteenElements;
+    private String[] groupSeventeenElements;
+    private String[] groupEighteenElements;
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     private Bundle hydrogenElement;
+
 
 
 
@@ -62,6 +78,13 @@ public class PeriodicTable extends FragmentActivity {
         groupNineElements = getResources().getStringArray(R.array.groupnineelements);
         groupTenElements = getResources().getStringArray(R.array.grouptenelements);
         groupElevenElements = getResources().getStringArray(R.array.groupelevenelements);
+        groupTwelveElements = getResources().getStringArray(R.array.grouptwelveelements);
+        groupThirteenElements = getResources().getStringArray(R.array.groupthirteenelements);
+        groupFourteenElements = getResources().getStringArray(R.array.groupfourteenelements);
+        groupFifteenElements = getResources().getStringArray(R.array.groupfifteenelements);
+        groupSixteenElements = getResources().getStringArray(R.array.groupsixteenelements);
+        groupSeventeenElements = getResources().getStringArray(R.array.groupseventeenelements);
+        groupEighteenElements = getResources().getStringArray(R.array.groupeighteenelements);
         //group one elements is equal to the data found in the string array in the strings.xml
         listViewGroupOne = (ListView) findViewById(R.id.listViewGroupOne);
         listViewGroupTwo = (ListView) findViewById(R.id.listViewGroupTwo);
@@ -74,6 +97,13 @@ public class PeriodicTable extends FragmentActivity {
         listViewGroupNine = (ListView) findViewById(R.id.listViewGroupNine);
         listViewGroupTen = (ListView) findViewById(R.id.listViewGroupTen);
         listViewGroupEleven = (ListView) findViewById(R.id.listViewGroupEleven);
+        listViewGroupTwelve = (ListView) findViewById(R.id.listViewGroupTwelve);
+        listViewGroupThirteen = (ListView) findViewById(R.id.listViewGroupThirteen);
+        listViewGroupFourteen = (ListView) findViewById(R.id.listViewGroupFourteen);
+        listViewGroupFifteen = (ListView) findViewById(R.id.listViewGroupFifteen);
+        listViewGroupSixteen = (ListView) findViewById(R.id.listViewGroupSixteen);
+        listViewGroupSeventeen = (ListView) findViewById(R.id.listViewGroupSeventeen);
+        listViewGroupEighteen = (ListView) findViewById(R.id.listViewGroupEighteen);
         imgView = (ImageView) findViewById(R.id.imgFragment);
         //hydrogenElement.putString("hydrogen","hydrogenContent");
 
@@ -89,6 +119,14 @@ public class PeriodicTable extends FragmentActivity {
         ArrayAdapter<String> arrayAdapterGroupTen = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupTenElements);
         ArrayAdapter<String> arrayAdapterGroupEleven = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupElevenElements);
 
+        ArrayAdapter<String> arrayAdapterGroupTwelve= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupTwelveElements);
+        ArrayAdapter<String> arrayAdapterGroupThirteen = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupThirteenElements);
+        ArrayAdapter<String> arrayAdapterGroupFourteen = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupFourteenElements);
+        ArrayAdapter<String> arrayAdapterGroupFifteen = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupFifteenElements);
+        ArrayAdapter<String> arrayAdapterGroupSixteen= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupSixteenElements);
+        ArrayAdapter<String> arrayAdapterGroupSeventeen = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupSeventeenElements);
+        ArrayAdapter<String> arrayAdapterGroupEighteen = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,groupEighteenElements);
+
         listViewGroupOne.setAdapter(arrayAdapter);
         listViewGroupTwo.setAdapter(arrayAdapterGroupTwo);
         listViewGroupThree.setAdapter(arrayAdapterGroupThree);
@@ -100,13 +138,23 @@ public class PeriodicTable extends FragmentActivity {
         listViewGroupNine.setAdapter(arrayAdapterGroupNine);
         listViewGroupTen.setAdapter(arrayAdapterGroupTen);
         listViewGroupEleven.setAdapter(arrayAdapterGroupEleven);
+//        listViewGroupTwelve.setAdapter(arrayAdapterGroupTwelve);
+//        listViewGroupThirteen.setAdapter(arrayAdapterGroupThirteen);
+//        listViewGroupFourteen.setAdapter(arrayAdapterGroupFourteen);
+//        listViewGroupFifteen.setAdapter(arrayAdapterGroupFifteen);
+//        listViewGroupSixteen.setAdapter(arrayAdapterGroupSixteen);
+//        listViewGroupSeventeen.setAdapter(arrayAdapterGroupSeventeen);
+//        listViewGroupEighteen.setAdapter(arrayAdapterGroupEighteen);
+
         listViewGroupOne.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //switch statement instead of if statement more syntatic sugar
+
                 switch(position){
                     case 0:
                         passDataToFragment("elementName","Hydrogen","elementAN","1","elementDesc","Hydrogen is an element that is responsible for a lot");
+
                         break;
                     case 1:
                         passDataToFragment("elementName","Lithium","elementAN","3","elementDesc","Lithium is an element that is responsible for a lot");
@@ -138,6 +186,15 @@ public class PeriodicTable extends FragmentActivity {
 
                 fragmentTransaction.commit();
 
+            }
+
+            public void onBackPressed(){
+                int count = getFragmentManager().getBackStackEntryCount();
+                if(count==0){
+                    PeriodicTable.super.onBackPressed();
+                }else{
+                    getFragmentManager().popBackStack();
+                }
             }
         });
 
