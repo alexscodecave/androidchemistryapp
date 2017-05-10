@@ -1,16 +1,11 @@
 package com.example.alexb.chemistryapplication;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToSettingsPage = new Intent(MainActivity.this,settingspage.class);
+                Intent goToSettingsPage = new Intent(MainActivity.this,famouschemists.class);
                 //intent is used to traverse to another activity
                 startActivity(goToSettingsPage);
             }

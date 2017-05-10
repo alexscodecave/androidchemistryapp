@@ -19,7 +19,7 @@
         <activity
             android:name=".PeriodicTable"
             android:screenOrientation="landscape" />
-        <activity android:name=".settingspage"></activity>
+        <activity android:name=".famouschemists"></activity>
     </application>
 
 </manifest>
