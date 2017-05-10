@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">ChemistryApplication</string>
+    <string name="homePageFirstText">Periodic Table</string>
+    <string name="homePageSecondText">Chemistry content</string>
+    <string name="homePageThirdText">Settings</string>
+
+    <string name="settingsheading">Settings</string>
+
+    <string-array name="grouponeelements">
+
+        <item>H</item>
+        <item>Li</item>
+        <item>Na</item>
+        <item>K</item>
+        <item>Rb</item>
+        <item>Cs</item>
+        <item>Fr</item>
+    </string-array>
+    <string-array name="grouponedetails">
+
+        <item>1</item>
+        <item>3</item>
+        <item>11</item>
+        <item>19</item>
+        <item>37</item>
+        <item>55</item>
+        <item>87</item>
+    </string-array>
+
+    <string-array name="grouptwoelements">
+        <item>Be</item>
+        <item>Mg</item>
+        <item>Ca</item>
+        <item>Sr</item>
+        <item>Ba</item>
+        <item>Ra</item>
+    </string-array>
+    <string-array name="groupthreeelements">
+        <item></item>
+        <item>Sc</item>
+        <item>Y</item>
+        <item>La</item>
+        <item>Ac</item>
+    </string-array>
+
+    <string-array name="groupfourelements">
+        <item>Ti</item>
+        <item>Zr</item>
+        <item>Hf</item>
+        <item>Rf</item>
+    </string-array>
+
+    <string-array name="groupfiveelements">
+        <item>V</item>
+        <item>Nb</item>
+        <item>Ta</item>
+        <item>Ha</item>
+    </string-array>
+
+
+    <string-array name="groupsixelements">
+        <item>Cr</item>
+        <item>Mo</item>
+        <item>W</item>
+        <item>Sg</item>
+    </string-array>
+
+    <string-array name="groupsevenelements">
+        <item>Mn</item>
+        <item>Tc</item>
+        <item>Re</item>
+        <item>Bh</item>
+    </string-array>
+
+    <string-array name="groupeightelements">
+        <item>Fe</item>
+        <item>Ru</item>
+        <item>Os</item>
+        <item>Hs</item>
+    </string-array>
+
+    <string-array name="groupnineelements">
+        <item>Co</item>
+        <item>Rh</item>
+        <item>Ir</item>
+    </string-array>
+
+    <string-array name="grouptenelements">
+        <item>Ni</item>
+        <item>Pd</item>
+        <item>Pt</item>
+        <item>Ds</item>
+    </string-array>
+
+    <string-array name="groupelevenelements">
+        <item>Cu</item>
+        <item>Ag</item>
+        <item>Au</item>
+    </string-array>
+    <string-array name="grouptwelveelements">
+        <item>Zn</item>
+        <item>Cd</item>
+        <item>Hg</item>
+    </string-array>
+
+    <string-array name="groupHalogens">
+        <item>F</item>
+        <item>Cl</item>
+        <item>Br</item>
+        <item>I</item>
+        <item>At</item>
+    </string-array>
+    <string-array name="groupNobleGases">
+        <item>He</item>
+        <item>Ne</item>
+        <item>Ar</item>
+        <item>Kr</item>
+        <item>Xe</item>
+        <item>Rn</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

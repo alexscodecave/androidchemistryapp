@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/elementName"
+        android:text="Element name"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/elementAtomicNumber"
+        android:layout_marginTop="30dp"
+        android:text="Atomic number"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/elementDescription"
+        android:layout_width="match_parent"
+        android:text="Element description"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
