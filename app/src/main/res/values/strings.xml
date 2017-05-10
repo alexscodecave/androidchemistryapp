@@ -6,6 +6,11 @@
 
     <string name="famouschemists">Famous chemists</string>
 
+    <string name="mendeleevHeading">Dmitri Mendeleev</string>
+    <string name="faradayHeading">Michael Faraday</string>
+    <string name="curieHeading">Marie Curie</string>
+
+
     <string-array name="grouponeelements">
 
         <item>H</item>
