@@ -22,6 +22,7 @@ public class elementProfile extends Fragment {
     private TextView elementAtomicNumber;
     private TextView elementDescription;
     private ImageView imgView;
+    Integer[] elementImages = {R.drawable.hydrogenhdpi,R.drawable.lithiumhdpi,R.drawable.sodiumhdpi};
 
     public elementProfile() {
         // Required empty public constructor
@@ -43,11 +44,14 @@ public class elementProfile extends Fragment {
         imgView = (ImageView) view.findViewById(R.id.imgFragment);
         if (bundle != null) {
             Log.d("fragment",name);
-            if(name=="hydrogen") {
-                imgView.setImageResource(R.drawable.hydrogenhdpi);
+            if(name=="Hydrogen") {
+                imgView.setImageResource(elementImages[0]);
             }
-            else if(name=="sodium"){
-                imgView.setImageResource(R.drawable.sodiumhdpi);
+            else if(name=="Lithium") {
+                imgView.setImageResource(elementImages[1]);
+            }
+            else if(name=="Sodium"){
+                imgView.setImageResource(elementImages[2]);
             }
 
             elementName = (TextView) view.findViewById(R.id.elementNameFragment);

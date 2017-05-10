@@ -99,18 +99,21 @@ public class PeriodicTable extends FragmentActivity {
         listViewGroupEight.setAdapter(arrayAdapterGroupEight);
         listViewGroupNine.setAdapter(arrayAdapterGroupNine);
         listViewGroupTen.setAdapter(arrayAdapterGroupTen);
-        listViewGroupTen.setAdapter(arrayAdapterGroupEleven);
-        listViewGroupEleven.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listViewGroupEleven.setAdapter(arrayAdapterGroupEleven);
+        listViewGroupOne.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position==1){
-                    passDataToFragment("elementName","Hydrogen","elementAN","1","elementDesc","Hydrogen is an element that is responsible for a lot");
-                }
-                else if(position==2){
-                    passDataToFragment("elementName","Lithium","elementAN","3","elementDesc","Lithium is an element that is responsible for a lot");
-                }
-                else if(position==3){
-                    passDataToFragment("elementName","Sodium","elementAN","11","elementDesc","Sodium is an element that is responsible for a lot");
+                //switch statement instead of if statement more syntatic sugar
+                switch(position){
+                    case 0:
+                        passDataToFragment("elementName","Hydrogen","elementAN","1","elementDesc","Hydrogen is an element that is responsible for a lot");
+                        break;
+                    case 1:
+                        passDataToFragment("elementName","Lithium","elementAN","3","elementDesc","Lithium is an element that is responsible for a lot");
+                        break;
+                    case 2:
+                        passDataToFragment("elementName","Sodium","elementAN","11","elementDesc","Sodium is an element that is responsible for a lot");
+                        break;
                 }
             }
             public void passDataToFragment(String elementNameKey,String elementNameValue,String elementANKey,
