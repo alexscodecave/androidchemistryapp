@@ -114,6 +114,13 @@ public class PeriodicTable extends FragmentActivity {
                     case 2:
                         passDataToFragment("elementName","Sodium","elementAN","11","elementDesc","Sodium is an element that is responsible for a lot");
                         break;
+                    case 3:
+                        passDataToFragment("elementName","Potassium","elementAN","19","elementDesc","Potassium is an element that is responsible for a lot");
+                        break;
+                    case 4:
+                        passDataToFragment("elementName","Rubidium","elementAN","37","elementDesc","Rubidium is an element that is responsible for a lot");
+                        break;
+
                 }
             }
             public void passDataToFragment(String elementNameKey,String elementNameValue,String elementANKey,
