@@ -168,6 +168,8 @@ public class PeriodicTable extends FragmentActivity {
                     case 4:
                         passDataToFragment("elementName","Rubidium","elementAN","37","elementDesc","Rubidium is an element that is responsible for a lot");
                         break;
+                    case 5:
+                        passDataToFragment("elementName","Caesium","elementAN","55","elementDesc","Caesium is an element that is responsible for a lot");
 
                 }
             }

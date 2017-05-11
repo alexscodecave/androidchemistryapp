@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexb.chemistryapplication.mendeleev">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="275dp"
+        android:src="@drawable/dmitrimendeleev"
+        android:layout_height="318dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>
