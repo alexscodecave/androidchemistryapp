@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:background="@color/FDGreen"
             android:id="@+id/androidPeriodicTableImageButton"
-            android:src="@drawable/periodictablehdpi"
+            android:src="@drawable/periodictablemdpi"
             android:layout_above="@+id/androidChemistryContent"
              />
 
@@ -34,7 +34,7 @@
             tools:layout_editor_absoluteY="8dp"
             tools:layout_editor_absoluteX="8dp"
             android:id="@+id/androidSettings"
-            android:src="@drawable/cogldpi"
+            android:src="@drawable/famouschemists"
              />
 
 </RelativeLayout>
