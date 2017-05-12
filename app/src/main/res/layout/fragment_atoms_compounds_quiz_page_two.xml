@@ -2,15 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alexb.chemistryapplication.Metals">
+    tools:context="com.example.alexb.chemistryapplication.atomsCompoundsQuizPageTwo">
 
     <!-- TODO: Update blank fragment layout -->
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/quizPageThreeHeading"
-        android:textColor="@color/FDWhite"
-        android:textSize="40dp"
-        android:background="@color/FDQuizMetals" />
+        android:text="compounds page 2" />
 
 </FrameLayout>

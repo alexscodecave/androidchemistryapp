@@ -97,13 +97,13 @@ public class PeriodicTable extends FragmentActivity {
         listViewGroupNine = (ListView) findViewById(R.id.listViewGroupNine);
         listViewGroupTen = (ListView) findViewById(R.id.listViewGroupTen);
         listViewGroupEleven = (ListView) findViewById(R.id.listViewGroupEleven);
-        listViewGroupTwelve = (ListView) findViewById(R.id.listViewGroupTwelve);
-        listViewGroupThirteen = (ListView) findViewById(R.id.listViewGroupThirteen);
-        listViewGroupFourteen = (ListView) findViewById(R.id.listViewGroupFourteen);
-        listViewGroupFifteen = (ListView) findViewById(R.id.listViewGroupFifteen);
-        listViewGroupSixteen = (ListView) findViewById(R.id.listViewGroupSixteen);
-        listViewGroupSeventeen = (ListView) findViewById(R.id.listViewGroupSeventeen);
-        listViewGroupEighteen = (ListView) findViewById(R.id.listViewGroupEighteen);
+//        listViewGroupTwelve = (ListView) findViewById(R.id.listViewGroupTwelve);
+//        listViewGroupThirteen = (ListView) findViewById(R.id.listViewGroupThirteen);
+//        listViewGroupFourteen = (ListView) findViewById(R.id.listViewGroupFourteen);
+//        listViewGroupFifteen = (ListView) findViewById(R.id.listViewGroupFifteen);
+//        listViewGroupSixteen = (ListView) findViewById(R.id.listViewGroupSixteen);
+//        listViewGroupSeventeen = (ListView) findViewById(R.id.listViewGroupSeventeen);
+//        listViewGroupEighteen = (ListView) findViewById(R.id.listViewGroupEighteen);
         imgView = (ImageView) findViewById(R.id.imgFragment);
         //hydrogenElement.putString("hydrogen","hydrogenContent");
 
@@ -154,7 +154,6 @@ public class PeriodicTable extends FragmentActivity {
                 switch(position){
                     case 0:
                         passDataToFragment("elementName","Hydrogen","elementAN","1","elementDesc","Hydrogen is an element that is responsible for a lot");
-
                         break;
                     case 1:
                         passDataToFragment("elementName","Lithium","elementAN","3","elementDesc","Lithium is an element that is responsible for a lot");
@@ -184,10 +183,24 @@ public class PeriodicTable extends FragmentActivity {
                 elementProfile elementProfile = new elementProfile();
                 elementProfile.setArguments(hydrogenData);
                 //elementProfile.setArguments(hydrogenElement);
-                fragmentTransaction.add(R.id.periodicTableContainer,elementProfile);
-
+                fragmentTransaction.replace(R.id.periodicTableContainer,elementProfile);
+                fragmentManager.popBackStack();
                 fragmentTransaction.commit();
+            }
+            public void replaceFragment(String elementNameKey,String elementNameValue,String elementANKey,
+                                        String elementANValue,String elementDescKey,String elementDescValue){
+                Bundle hydrogenData = new Bundle();
+                hydrogenData.putString(elementNameKey,elementNameValue);
 
+                hydrogenData.putString(elementANKey,elementANValue);
+                hydrogenData.putString(elementDescKey,elementDescValue);
+
+                elementProfile elementProfile = new elementProfile();
+                elementProfile.setArguments(hydrogenData);
+                elementProfile elementTwo = new elementProfile();
+                fragmentTransaction.replace(R.id.fragmentContainer,elementTwo);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
 
             public void populateGroup1(){

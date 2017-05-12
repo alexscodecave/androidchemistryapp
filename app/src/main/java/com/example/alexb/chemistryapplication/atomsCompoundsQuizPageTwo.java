@@ -11,11 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class periodictableQuizPage extends Fragment {
+public class atomsCompoundsQuizPageTwo extends Fragment {
 
 
-
-    public periodictableQuizPage() {
+    public atomsCompoundsQuizPageTwo() {
         // Required empty public constructor
     }
 
@@ -24,7 +23,7 @@ public class periodictableQuizPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_periodictable_quiz_page, container, false);
+        return inflater.inflate(R.layout.fragment_atoms_compounds_quiz_page_two, container, false);
     }
 
 }

@@ -11,6 +11,7 @@
         android:text="@string/quizPageOneHeading"
         android:textColor="@color/FDWhite"
         android:textSize="40dp"
+        android:id="@+id/btnQuizPeriodicTable"
         android:layout_height="match_parent" />
 
 </FrameLayout>

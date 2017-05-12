@@ -46,6 +46,8 @@ public class QuizActivity extends AppCompatActivity {
                     return new periodictableQuizPage();
                 case 1:
                     return new atomsCompoundsQuizPage();
+                case 2:
+                    return new Metals();
 
             }
 
@@ -54,7 +56,7 @@ public class QuizActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
 
