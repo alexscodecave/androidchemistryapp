@@ -10,6 +10,6 @@
     <color name="FDGreen">#2ecc71</color>
     <color name="FDWhite">#ffffff</color>
     <color name="FDCrusta">#F2784B</color>
-
-
+    <color name="FDQuizPageOne">#C0392B</color>
+    <color name="FDQuizPageTwo">#9b59b6</color>
 </resources>

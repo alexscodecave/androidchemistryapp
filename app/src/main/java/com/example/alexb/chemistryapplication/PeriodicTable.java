@@ -190,6 +190,10 @@ public class PeriodicTable extends FragmentActivity {
 
             }
 
+            public void populateGroup1(){
+
+            }
+
             public void onBackPressed(){
                 int count = getFragmentManager().getBackStackEntryCount();
                 if(count==0){

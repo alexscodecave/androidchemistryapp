@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3"
     tools:context="com.example.alexb.chemistryapplication.MainActivity">
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
             android:background="@color/FDGreen"
             android:id="@+id/androidPeriodicTableImageButton"
+            android:layout_weight="1"
+            android:layout_gravity="left"
             android:src="@drawable/periodictableldpi"
              />
 
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
             android:background="@color/FDBlue"
             android:textColor="@color/white"
             android:id="@+id/androidChemistryContent"
             android:src="@drawable/quizldpi"
+            android:layout_gravity="center"
             android:layout_below="@+id/androidPeriodicTableImageButton"
-            android:layout_alignParentStart="true"
+            android:layout_weight="1"
             android:layout_above="@+id/androidSettings" />
 
         <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@color/FDWhite"
-            android:textColor="@color/white"
             android:id="@+id/androidSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@color/FDWhite"
             android:src="@drawable/famouschemists"
-            android:layout_alignParentBottom="true"
-             />
+            android:textColor="@color/white" />
 
-</RelativeLayout>
+</LinearLayout>

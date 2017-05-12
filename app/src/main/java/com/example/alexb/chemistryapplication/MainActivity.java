@@ -11,14 +11,17 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     ImageButton btnPeriodicTable;
     ImageButton btnSettings;
+    ImageButton btnQuizContent;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnSettings = (ImageButton) findViewById(R.id.androidSettings);
         btnPeriodicTable = (ImageButton) findViewById(R.id.androidPeriodicTableImageButton);
+        btnQuizContent = (ImageButton) findViewById(R.id.androidChemistryContent);
+        btnSettings = (ImageButton) findViewById(R.id.androidSettings);
+
 
         btnPeriodicTable.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(),"Button clicked",Toast.LENGTH_LONG).show();
                 Log.d("W","It works");
                 startActivity(goToPeriodicTable);
+            }
+        });
+
+        btnQuizContent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToQuizContent = new Intent(MainActivity.this,QuizActivity.class);
+                startActivity(goToQuizContent);
             }
         });
 

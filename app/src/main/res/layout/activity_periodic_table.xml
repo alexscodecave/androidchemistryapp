@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,37 +7,27 @@
     android:id="@+id/periodicTableContainer"
     android:layout_height="match_parent"
     tools:context="com.example.alexb.chemistryapplication.PeriodicTable">
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none" >
+
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Alkali Metals"
-            android:background="@color/FDGreen"
-            android:layout_height="wrap_content" />
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Alkali Earth Metals"
-            android:background="@color/FDBlue"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Transition Metals"
-            android:background="@color/FDCrusta"
-            android:layout_height="wrap_content" />
-
-
-
-    </LinearLayout>
 
     <ListView
         android:id="@+id/listViewGroupOne"
         android:layout_width="match_parent"
-        android:layout_weight="0.1"
+        android:layout_weight="0.2"
         android:background="@color/FDGreen"
         android:layout_height="wrap_content">
 
@@ -107,8 +98,8 @@
         android:layout_weight="0.1"
         android:layout_height="wrap_content">
     </ListView>
-
-
+    </LinearLayout>
+</HorizontalScrollView>
 
 
 

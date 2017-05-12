@@ -19,7 +19,8 @@
         <activity
             android:name=".PeriodicTable"
             android:screenOrientation="landscape" />
-        <activity android:name=".famouschemists"></activity>
+        <activity android:name=".famouschemists" />
+        <activity android:name=".QuizActivity"></activity>
     </application>
 
 </manifest>

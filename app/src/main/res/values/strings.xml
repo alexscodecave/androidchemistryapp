@@ -10,6 +10,12 @@
     <string name="faradayHeading">Michael Faraday</string>
     <string name="curieHeading">Marie Curie</string>
 
+    <string name="quizPageOneHeading">What is the periodic table?</string>
+    <string name="quizPageTwoHeading">Atoms and compounds</string>
+    <string name="quizPageThreeHeading">Metals</string>
+    <string name="quizPageFourHeading">Acids and Alkalis</string>
+
+
 
     <string-array name="grouponeelements">
 
@@ -141,7 +147,6 @@
     </string-array>
 
 
-
     <string-array name="groupHalogens">
         <item>F</item>
         <item>Cl</item>
@@ -157,7 +162,6 @@
         <item>Xe</item>
         <item>Rn</item>
     </string-array>
-
 
 
     <!-- TODO: Remove or change this placeholder text -->
