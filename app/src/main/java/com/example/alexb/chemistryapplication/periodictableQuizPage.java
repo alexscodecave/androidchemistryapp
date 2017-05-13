@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GestureDetectorCompat;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -33,20 +35,7 @@ public class periodictableQuizPage extends Fragment implements Animation.Animati
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_periodictable_quiz_page, container, false);
         btnGoToPeriodicTableExplaination = (Button) v.findViewById(R.id.btnQuizPeriodicTable);
-////        animSlideUp = AnimationUtils.loadAnimation(getContext(),R.anim.slideup);
-////        // Inflate the layout for this fragment
-////        animSlideUp.setAnimationListener(this);
-//        btnGoToPeriodicTableExplaination.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                periodicTableQuizPageTwo goToPeriodicTablePage2 = new periodicTableQuizPageTwo();
-////                Toast.makeText(getContext(), "Clicked on button", Toast.LENGTH_SHORT).show();
-////                ft = getFragmentManager().beginTransaction();
-////                ft.replace(R.id.fragmentPeriodicTableContainer, goToPeriodicTablePage2);
-////                ft.commit();
-//
-//            }
-//        });
+
 
 
         btnGoToPeriodicTableExplaination.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +45,17 @@ public class periodictableQuizPage extends Fragment implements Animation.Animati
                 switchFragment();
                 //switch from first periodic table page to periodic table page two
             }
+        });
+
+        v.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(event.getAction()==MotionEvent.ACTION_DOWN){
+                    Toast.makeText(getContext(), "This has been down since the get go", Toast.LENGTH_SHORT).show();
+                }
+                return true;
+            }
+
         });
 
         return v;

@@ -189,22 +189,6 @@ public class PeriodicTable extends FragmentActivity {
                 fragmentManager.popBackStack();
                 fragmentTransaction.commit();
             }
-            public void replaceFragment(String elementNameKey,String elementNameValue,String elementANKey,
-                                        String elementANValue,String elementDescKey,String elementDescValue){
-                Bundle hydrogenData = new Bundle();
-                hydrogenData.putString(elementNameKey,elementNameValue);
-
-                hydrogenData.putString(elementANKey,elementANValue);
-                hydrogenData.putString(elementDescKey,elementDescValue);
-
-                elementProfile elementProfile = new elementProfile();
-                elementProfile.setArguments(hydrogenData);
-                elementProfile elementTwo = new elementProfile();
-                fragmentTransaction.replace(R.id.fragmentContainer,elementTwo);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-
             public void onBackPressed(){
                 int count = getFragmentManager().getBackStackEntryCount();
                 if(count==0){

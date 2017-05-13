@@ -4,15 +4,21 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.GestureDetectorCompat;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.widget.Toast;
 
-public class QuizActivity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity{
     ViewPager mViewPager;
     quizPages quizPagesPagerAdapter;
+
 
 
     @Override
@@ -22,7 +28,9 @@ public class QuizActivity extends AppCompatActivity {
         quizPagesPagerAdapter = new quizPages(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.quizPager);
         mViewPager.setAdapter(quizPagesPagerAdapter);
+
     }
+
     @Override
     public void onBackPressed(){
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -33,6 +41,8 @@ public class QuizActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
+
 
 
     private class quizPages extends FragmentPagerAdapter {
