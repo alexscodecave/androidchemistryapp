@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 public class QuizActivity extends AppCompatActivity {
     ViewPager mViewPager;
@@ -23,14 +24,13 @@ public class QuizActivity extends AppCompatActivity {
         mViewPager.setAdapter(quizPagesPagerAdapter);
     }
     @Override
-    public void onBackPressed() {
-        if (mViewPager.getCurrentItem() == 0) {
-            // If the user is currently looking at the first step, allow the system to handle the
-            // Back button. This calls finish() on this activity and pops the back stack.
-            super.onBackPressed();
+    public void onBackPressed(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack();
         } else {
-            // Otherwise, select the previous step.
-            mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
+
+            super.onBackPressed();
         }
     }
 

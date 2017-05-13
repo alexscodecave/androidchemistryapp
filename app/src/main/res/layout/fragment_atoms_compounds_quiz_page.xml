@@ -11,5 +11,6 @@
     android:background="@color/FDQuizPageTwo"
     android:textColor="@color/FDWhite"
     android:textSize="40dp"
+    android:id="@+id/atomsCompounds"
     android:layout_height="match_parent" />
 </FrameLayout>

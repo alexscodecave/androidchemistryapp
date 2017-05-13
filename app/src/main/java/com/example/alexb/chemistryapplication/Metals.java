@@ -38,7 +38,7 @@ public class Metals extends Fragment {
     }
     public void switchFragment() {
 
-        getFragmentManager().beginTransaction().replace(R.id.quizActivityLayout, new MetalsQuizPageTwo()).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new MetalsQuizPageTwo()).addToBackStack(null).commit();
     }
 
 }

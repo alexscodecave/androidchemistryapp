@@ -14,11 +14,10 @@ import android.view.ViewGroup;
 public class periodicTableQuizPageTwo extends Fragment {
 
 
+
     public periodicTableQuizPageTwo() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
