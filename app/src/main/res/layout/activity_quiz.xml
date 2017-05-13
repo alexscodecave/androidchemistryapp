@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/quizActivityLayout"
     tools:context="com.example.alexb.chemistryapplication.QuizActivity">
 
     <android.support.v4.view.ViewPager
@@ -12,5 +13,6 @@
         android:layout_height="match_parent">
 
     </android.support.v4.view.ViewPager>
+
 
 </android.support.constraint.ConstraintLayout>

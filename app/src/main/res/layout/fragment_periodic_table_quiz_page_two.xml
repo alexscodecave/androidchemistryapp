@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/quizActivityLayoutPage2"
+    android:background="@color/FDBlue"
+    tools:context="com.example.alexb.chemistryapplication.periodicTableQuizPageTwo">
+
+    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:layout_width="match_parent"
+
+    android:background="@color/FDGreen"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Page 2 of periodic table quiz"
+        android:textColor="@color/FDWhite"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
+
+</FrameLayout>

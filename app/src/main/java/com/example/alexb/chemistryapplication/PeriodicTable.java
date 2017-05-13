@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -203,10 +205,6 @@ public class PeriodicTable extends FragmentActivity {
                 fragmentTransaction.commit();
             }
 
-            public void populateGroup1(){
-
-            }
-
             public void onBackPressed(){
                 int count = getFragmentManager().getBackStackEntryCount();
                 if(count==0){
@@ -214,6 +212,14 @@ public class PeriodicTable extends FragmentActivity {
                 }else{
                     getFragmentManager().popBackStack();
                 }
+            }
+
+
+            public void slideUp(){
+                Slide slideUpTransition = new Slide();
+                slideUpTransition.setSlideEdge(Gravity.BOTTOM);
+                slideUpTransition.setDuration(getResources().getInteger(R.integer.slideUpTransition));
+
             }
         });
 

@@ -10,6 +10,7 @@
         android:layout_height="match_parent"
         android:text="@string/quizPageThreeHeading"
         android:textColor="@color/FDWhite"
+        android:id="@+id/metalButton"
         android:textSize="40dp"
         android:background="@color/FDQuizMetals" />
 

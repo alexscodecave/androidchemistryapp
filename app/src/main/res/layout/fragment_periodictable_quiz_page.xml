@@ -1,9 +1,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/fragmentPeriodicTableContainer"
     android:layout_height="match_parent"
-    tools:context="com.example.alexb.chemistryapplication.periodictableQuizPage">
 
+    tools:context="com.example.alexb.chemistryapplication.periodictableQuizPage">
 
     <Button
         android:layout_width="match_parent"
@@ -11,7 +12,9 @@
         android:text="@string/quizPageOneHeading"
         android:textColor="@color/FDWhite"
         android:textSize="40dp"
+        android:onClick="clickButton"
         android:id="@+id/btnQuizPeriodicTable"
         android:layout_height="match_parent" />
+
 
 </FrameLayout>

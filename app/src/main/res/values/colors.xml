@@ -13,4 +13,5 @@
     <color name="FDQuizPageOne">#C0392B</color>
     <color name="FDQuizPageTwo">#9b59b6</color>
     <color name="FDQuizMetals">#34495e</color>
+    <color name="FDQuizMetalsPageTwo">#1abc9c</color>
 </resources>
