@@ -198,13 +198,6 @@ public class PeriodicTable extends FragmentActivity {
                 }
             }
 
-
-            public void slideUp(){
-                Slide slideUpTransition = new Slide();
-                slideUpTransition.setSlideEdge(Gravity.BOTTOM);
-                slideUpTransition.setDuration(getResources().getInteger(R.integer.slideUpTransition));
-
-            }
         });
 
     }

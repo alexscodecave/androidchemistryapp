@@ -10,10 +10,11 @@
     <string name="faradayHeading">Michael Faraday</string>
     <string name="curieHeading">Marie Curie</string>
 
-    <string name="quizPageOneHeading">What is the periodic table?</string>
-    <string name="quizPageTwoHeading">Atoms and compounds</string>
+    <string name="quizPageOneHeading">Periodic table revision questions</string>
+    <string name="quizPageTwoHeading">Atoms and compounds questions</string>
     <string name="quizPageThreeHeading">Metals</string>
     <string name="quizPageFourHeading">Acids and Alkalis</string>
+    <string name="signedInGoogleAccount"></string>
 
 
     <string-array name="grouponeelements">
@@ -165,6 +166,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="periodictablerevisionq1">Q1: What is group 1 of the periodic table called?</string>
 
 
 </resources>

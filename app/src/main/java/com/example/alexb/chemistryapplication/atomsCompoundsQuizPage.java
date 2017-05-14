@@ -41,7 +41,7 @@ public class atomsCompoundsQuizPage extends Fragment {
 
     public void switchFragment() {
 
-        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new atomsCompoundsQuizPageTwo()).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new periodicTableQuizPageTwo()).addToBackStack(null).commit();
     }
 
 

@@ -14,11 +14,62 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
     <TextView
-        android:text="Page 2 of periodic table quiz"
+        android:text="@string/periodictablerevisionq1"
         android:textColor="@color/FDWhite"
         android:textSize="30dp"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/periodicTableRGQ1"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/periodicTableQ1A1"
+            android:layout_width="wrap_content"
+            android:color="@color/FDWhite"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/FDWhite"
+            android:text="Halogens"
+             />
+
+        <RadioButton
+            android:id="@+id/periodicTableQ1A2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textSize="20dp"
+            android:textColor="@color/FDWhite"
+            android:text="Alkali metals" />
+
+        <RadioButton
+            android:id="@+id/periodicTableQ1A3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/FDWhite"
+            android:textSize="20dp"
+            android:layout_marginTop="100dp"
+            android:text="Copper group"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="Submit answer"
+        android:textSize="20dp"
+        android:id="@+id/btnQuestionTwo"
+        android:layout_marginTop="60dp"
+        android:background="@color/FDWhite"
+        android:layout_height="wrap_content" />
+
+
+
+
 
 
 </LinearLayout>

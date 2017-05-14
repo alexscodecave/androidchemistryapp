@@ -19,8 +19,11 @@ import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class periodictableQuizPage extends Fragment implements Animation.AnimationListener {
+public class periodictableQuizPage extends Fragment {
 
+    private float YAxisOne;
+    private float YAxisTwo;
+    static final int MIN_DISTANCE = 150;
     Animation animSlideUp;
     Button btnGoToPeriodicTableExplaination;
     FragmentTransaction ft;
@@ -34,26 +37,33 @@ public class periodictableQuizPage extends Fragment implements Animation.Animati
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_periodictable_quiz_page, container, false);
-        btnGoToPeriodicTableExplaination = (Button) v.findViewById(R.id.btnQuizPeriodicTable);
-
-
-
-        btnGoToPeriodicTableExplaination.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                switchFragment();
-                //switch from first periodic table page to periodic table page two
-            }
-        });
 
         v.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction()==MotionEvent.ACTION_DOWN){
-                    Toast.makeText(getContext(), "This has been down since the get go", Toast.LENGTH_SHORT).show();
+                switch(event.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+                        YAxisOne = event.getY();
+                        Toast.makeText(getContext(), "On click down", Toast.LENGTH_SHORT).show();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        YAxisTwo = event.getY();
+                        float OutcomeY = YAxisTwo-YAxisOne;
+                        if(Math.abs(OutcomeY) > MIN_DISTANCE)
+                        {
+                            if(YAxisTwo>YAxisOne){
+                                Toast.makeText(getContext(), "Up to down", Toast.LENGTH_SHORT).show(); //this works!!!!
+                                switchFragment();
+                            }
+                            else{
+                                Toast.makeText(getContext(), "Down to up", Toast.LENGTH_SHORT).show(); //this works too!!!!
+
+                            }
+                        }
+                        break;
                 }
                 return true;
+
             }
 
         });
@@ -67,20 +77,4 @@ public class periodictableQuizPage extends Fragment implements Animation.Animati
         getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new periodicTableQuizPageTwo()).addToBackStack(null).commit();
     }
 
-    @Override
-    public void onAnimationStart(Animation animation) {
-
-    }
-
-    @Override
-    public void onAnimationEnd(Animation animation) {
-        if (animation == animSlideUp) {
-            Toast.makeText(getContext(), "Animation finished", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @Override
-    public void onAnimationRepeat(Animation animation) {
-
-    }
 }
