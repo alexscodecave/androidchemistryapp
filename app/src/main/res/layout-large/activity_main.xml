@@ -8,37 +8,39 @@
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="275dp"
             android:background="@color/FDGreen"
             android:id="@+id/androidPeriodicTableImageButton"
-            android:src="@drawable/periodictablexxhdpi"
+            android:src="@drawable/periodictablexxxhdpi"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
 
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="275dp"
             android:background="@color/FDBlue"
             android:textColor="@color/white"
             android:id="@+id/androidChemistryContent"
-            android:src="@drawable/quizxxhdpi"
+            android:src="@drawable/quizxxxhdpi"
             android:layout_below="@+id/androidPeriodicTableImageButton"
             android:layout_alignParentStart="true" />
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="275dp"
             android:background="@color/FDWhite"
             android:textColor="@color/white"
             android:id="@+id/androidSettings"
-            android:src="@drawable/famouschemists"
+            android:src="@drawable/chemistscomplete"
             android:layout_below="@+id/androidChemistryContent"
             android:layout_alignParentStart="true" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/androidSettings"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content" />
 
         <TextView

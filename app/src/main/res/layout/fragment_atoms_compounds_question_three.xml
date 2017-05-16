@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexb.chemistryapplication.atomsCompoundsQuestionThree">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/outerLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/lithiumWithoutAtom"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/lithiumwithoutatomshdpi"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_below="@id/outerLayout"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/leftAtomForLithium"
+            android:layout_width="wrap_content"
+            android:src="@drawable/atomforlithiumhdpi"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/middleAtomForLithium"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/atomforlithiumhdpi"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/rightAtomForLithium"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/atomforlithiumhdpi"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+</RelativeLayout>
+</FrameLayout>

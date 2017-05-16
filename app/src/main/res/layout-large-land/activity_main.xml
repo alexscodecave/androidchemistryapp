@@ -9,34 +9,34 @@
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="177dp"
+            android:layout_height="160dp"
             android:background="@color/FDGreen"
             android:id="@+id/androidPeriodicTableImageButton"
             android:layout_gravity="top"
-            android:src="@drawable/periodictablemdpi" />
+            android:src="@drawable/periodictableldpi" />
 
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="160dp"
             android:background="@color/FDBlue"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:id="@+id/androidChemistryContent"
-            android:src="@drawable/quizmdpi" />
+            android:src="@drawable/quizldpi" />
 
         <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="160dp"
             android:background="@color/FDWhite"
             android:textColor="@color/white"
             android:id="@+id/androidSettings"
             android:layout_gravity="bottom"
-            android:src="@drawable/famouschemists" />
+            android:src="@drawable/chemistscomplete" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView

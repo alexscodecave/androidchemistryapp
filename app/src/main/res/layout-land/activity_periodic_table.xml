@@ -7,74 +7,74 @@
     android:layout_height="match_parent"
     tools:context="com.example.alexb.chemistryapplication.PeriodicTable">
 
-    <ListView
-        android:id="@+id/listViewGroupOne"
-        android:layout_width="50dp"
-        android:background="@color/FDGreen"
-        android:layout_height="wrap_content">
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupOne"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:background="@color/FDGreen"-->
+        <!--android:layout_height="wrap_content">-->
 
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupTwo"
-        android:layout_width="50dp"
-        android:background="@color/FDBlue"
-        android:layout_height="wrap_content">
-    </ListView>
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupTwo"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:background="@color/FDBlue"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
 
-    <ListView
-        android:id="@+id/listViewGroupThree"
-        android:layout_width="39dp"
-        android:layout_height="wrap_content"
-        android:background="@color/FDCrusta"></ListView>
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupThree"-->
+        <!--android:layout_width="39dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/FDCrusta"></ListView>-->
 
-    <ListView
-        android:id="@+id/listViewGroupFour"
-        android:layout_width="40dp"
-        android:background="@color/FDCrusta"
-        android:layout_height="wrap_content">
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupFive"
-        android:layout_width="37dp"
-        android:background="@color/FDCrusta"
-        android:layout_height="wrap_content">
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupSix"
-        android:layout_width="50dp"
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupFour"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:background="@color/FDCrusta"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupFive"-->
+        <!--android:layout_width="37dp"-->
+        <!--android:background="@color/FDCrusta"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupSix"-->
+        <!--android:layout_width="50dp"-->
 
-        android:layout_height="wrap_content">
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupSeven"
-        android:layout_width="40dp"
-        android:background="@color/FDCrusta"
-        android:layout_height="wrap_content">
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupEight"
-        android:layout_width="50dp"
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupSeven"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:background="@color/FDCrusta"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupEight"-->
+        <!--android:layout_width="50dp"-->
 
-        android:layout_height="wrap_content">
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupNine"
-        android:layout_width="50dp"
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupNine"-->
+        <!--android:layout_width="50dp"-->
 
-        android:layout_height="wrap_content">
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupTen"
-        android:layout_width="56dp"
-        android:background="@color/FDCrusta"
-        android:layout_height="wrap_content">
-    </ListView>
-    <ListView
-        android:id="@+id/listViewGroupEleven"
-        android:layout_width="50dp"
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupTen"-->
+        <!--android:layout_width="56dp"-->
+        <!--android:background="@color/FDCrusta"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+    <!--<ListView-->
+        <!--android:id="@+id/listViewGroupEleven"-->
+        <!--android:layout_width="50dp"-->
 
-        android:layout_height="wrap_content">
-    </ListView>
+        <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
     <!--<ListView-->
         <!--android:id="@+id/listViewGroupTwelve"-->
         <!--android:layout_width="50dp"-->

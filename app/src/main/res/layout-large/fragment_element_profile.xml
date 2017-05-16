@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/fragmentContainer"
+    android:background="@color/FDGreen"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexb.chemistryapplication.elementProfile">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/imgFragment"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/elementNameFragment"
+        android:layout_width="match_parent"
+        android:textColor="@color/FDWhite"
+        android:layout_height="match_parent"
+        android:text="" />
+    <TextView
+        android:id="@+id/elementAtomicNumberFragment"
+        android:layout_width="match_parent"
+        android:textColor="@color/FDWhite"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/elementDescriptionFragment"
+        android:layout_width="match_parent"
+        android:textColor="@color/FDWhite"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</FrameLayout>
+

@@ -38,7 +38,7 @@
             android:layout_gravity="right"
             android:layout_weight="1"
             android:background="@color/FDWhite"
-            android:src="@drawable/famouschemists"
+            android:src="@drawable/chemistscomplete"
             android:textColor="@color/white" />
 
         <com.google.android.gms.common.SignInButton

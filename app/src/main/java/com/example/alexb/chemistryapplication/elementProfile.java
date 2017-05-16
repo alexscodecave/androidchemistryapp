@@ -22,8 +22,10 @@ public class elementProfile extends Fragment {
     private TextView elementAtomicNumber;
     private TextView elementDescription;
     private ImageView imgView;
-    Integer[] elementImages = {R.drawable.hydrogenhdpi,R.drawable.lithiumhdpi,R.drawable.sodiumhdpi,
-            R.drawable.potassiumhdpi,R.drawable.rubidiumhdpi,R.drawable.caesiumhdpi};
+    Integer[] elementImagesGroupOne = {R.drawable.hydrogenxxhdpi,R.drawable.lithiumxxhdpi,R.drawable.sodiumxxhdpi,
+            R.drawable.potassiumxxhdpi,R.drawable.rubidiumxxhdpi,R.drawable.caesiumxxhdpi,R.drawable.franciumxxhdpi};
+    Integer[] elementImagesGroupTwo = {R.drawable.berilliumxxhdpi,R.drawable.magnesiumxxhdpi,R.drawable.calciumxxhdpi,
+    R.drawable.strontiumxxhdpi,R.drawable.bariumxxhdpi};
 
     public elementProfile() {
         // Required empty public constructor
@@ -36,33 +38,27 @@ public class elementProfile extends Fragment {
 //        elementName = (TextView)getView().findViewById(R.id.elementName);
 //        elementAtomicNumber = (TextView)getView().findViewById(R.id.elementAtomicNumber);
 //        elementDescription = (TextView)getView().findViewById(R.id.elementDescription);
+
         View view = inflater.inflate(R.layout.fragment_element_profile, container, false);
         Bundle bundle = this.getArguments();
 //        String i = bundle.getString("hydrogen");
-        String name = this.getArguments().get("elementName").toString();
-        String hydrogenAN = this.getArguments().get("elementAN").toString();
-        String hydrogenDesc = this.getArguments().get("elementDesc").toString();
+        String name = bundle.getString("elementName");
+        String hydrogenAN = bundle.getString("elementAN");
+        String hydrogenDesc = bundle.getString("elementDesc");
         imgView = (ImageView) view.findViewById(R.id.imgFragment);
         if (bundle != null) {
-            Log.d("fragment",name);
-            if(name=="Hydrogen") {
-                imgView.setImageResource(elementImages[0]);
-            }
-            else if(name=="Lithium") {
-                imgView.setImageResource(elementImages[1]);
-            }
-            else if(name=="Sodium"){
-                imgView.setImageResource(elementImages[2]);
-            }
-            else if(name=="Potassium"){
-                imgView.setImageResource(elementImages[3]);
-            }
-            else if(name=="Rubidium"){
-                imgView.setImageResource(elementImages[4]);
-            }
-            else if(name=="Caesium"){
-                imgView.setImageResource(elementImages[5]);
-            }
+            nameOfElementToImage("Hydrogen",elementImagesGroupOne,0);
+            nameOfElementToImage("Lithium",elementImagesGroupOne,1);
+            nameOfElementToImage("Sodium",elementImagesGroupOne,2);
+            nameOfElementToImage("Potassium",elementImagesGroupOne,3);
+            nameOfElementToImage("Rubidium",elementImagesGroupOne,4);
+            nameOfElementToImage("Caesium",elementImagesGroupOne,5);
+            nameOfElementToImage("Francium",elementImagesGroupOne,6);
+            nameOfElementToImage("Berillium",elementImagesGroupTwo,0);
+            nameOfElementToImage("Magnesium",elementImagesGroupTwo,1);
+            nameOfElementToImage("Calcium",elementImagesGroupTwo,2);
+            nameOfElementToImage("Strontium",elementImagesGroupTwo,3);
+            nameOfElementToImage("Barium",elementImagesGroupTwo,4);
 
             elementName = (TextView) view.findViewById(R.id.elementNameFragment);
             elementName.setText("Element name: "+name);
@@ -71,6 +67,9 @@ public class elementProfile extends Fragment {
             elementDescription = (TextView) view.findViewById(R.id.elementDescriptionFragment);
             elementDescription.setText("Element description: "+hydrogenDesc);
         }
+        else{
+            Toast.makeText(getContext(), "Bundle is empty", Toast.LENGTH_SHORT).show();
+        }
         return view;
 
     }
@@ -78,6 +77,20 @@ public class elementProfile extends Fragment {
     public String setElementData(String elemName){
         elementName.setText(elemName);
         return elemName;
+    }
+
+    /**
+     *
+     * @param elementName contains element name
+     * @param imageArray contains the array in which the element image is heralded
+     * @param imageArrayIndex contains the index at which to access the above array
+     */
+
+    public void nameOfElementToImage(String elementName,Integer[] imageArray,int imageArrayIndex){
+        String name = this.getArguments().get("elementName").toString();
+        if(name==elementName){
+            imgView.setImageResource(imageArray[imageArrayIndex]);
+        }
     }
 
 }

@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +30,7 @@ import com.google.android.gms.games.achievement.Achievements;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener{
+public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private float YAxisOne;
     private float YAxisTwo;
@@ -45,23 +46,24 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
     private boolean mResolvingConnectionFailure = false;
     private boolean mAutoStartSignInflow = true;
     private boolean mSignInClicked = false;
-
-
+    RadioGroup periodicTablePageTwoRG;
+    int selectedRGElement;
 
 
     public periodicTableQuizPageTwo() {
         // Required empty public constructor
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v =  inflater.inflate(R.layout.fragment_periodic_table_quiz_page_two, container, false);
-
-
+        View v = inflater.inflate(R.layout.fragment_periodic_table_quiz_page_two, container, false);
+        periodicTablePageTwoRG = (RadioGroup) v.findViewById(R.id.periodicTableRGQ1);
 
         googleApiClient = new GoogleApiClient.Builder(getContext())
-                .addApi(Games.API)
+                .enableAutoManage(getActivity(), 0, this)
+                .addApi(Games.API).addScope(Games.SCOPE_GAMES)
                 .build();
 
         btnSubmitAnswer = (Button) v.findViewById(R.id.btnQuestionTwo);
@@ -69,27 +71,35 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "Touched the submit button", Toast.LENGTH_SHORT).show();
-                Games.Achievements.unlock(googleApiClient," CgkIv6L9ivQIEAIQAQ");
+                selectedRGElement = periodicTablePageTwoRG.getCheckedRadioButtonId();
+                if (googleApiClient.isConnected()) {
+                    if (selectedRGElement == 0) {
+                        Games.Achievements.unlock(googleApiClient, " CgkIv6L9ivQIEAIQAQ");
+                    } else {
+                        Toast.makeText(getContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getContext(), "Api not online", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
-            v.setOnTouchListener(new View.OnTouchListener() {
+        v.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch(event.getAction()){
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         YAxisOne = event.getY();
                         Toast.makeText(getContext(), "On click down", Toast.LENGTH_SHORT).show();
                         break;
                     case MotionEvent.ACTION_UP:
                         YAxisTwo = event.getY();
-                        float OutcomeY = YAxisTwo-YAxisOne;
-                        if(Math.abs(OutcomeY) > MIN_DISTANCE)
-                        {
-                            if(YAxisTwo>YAxisOne){
+                        float OutcomeY = YAxisTwo - YAxisOne;
+                        if (Math.abs(OutcomeY) > MIN_DISTANCE) {
+                            if (YAxisTwo > YAxisOne) {
                                 Toast.makeText(getContext(), "Up to down", Toast.LENGTH_SHORT).show(); //this works!!!!
                                 switchFragment();
-                            }
-                            else{
+                            } else {
                                 Toast.makeText(getContext(), "Down to up", Toast.LENGTH_SHORT).show(); //this works too!!!!
 
                             }
@@ -105,19 +115,21 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
 
 
     }
+
     public void switchFragment() {
 
-        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new periodictableQuizPage()).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup, R.anim.slidedown).replace(R.id.quizActivityLayout, new periodictableQuizPage()).addToBackStack(null).commit();
     }
 
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         googleApiClient.connect();
     }
+
     @Override
-    public void onStop(){
+    public void onStop() {
         super.onStop();
         googleApiClient.disconnect();
     }
@@ -134,19 +146,16 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        if(mResolvingConnectionFailure){
+        if (mResolvingConnectionFailure) {
             return;
         }
         //if sign in button clicked
-        if(mSignInClicked|| mAutoStartSignInflow){
+        if (mSignInClicked || mAutoStartSignInflow) {
             mAutoStartSignInflow = false;
             mSignInClicked = false;
             mResolvingConnectionFailure = true;
         }
     }
-
-
-
 
 
 }

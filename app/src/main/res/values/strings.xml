@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ChemistryApplication</string>
+    <string name="app_name">Chemistry Revision</string>
     <string name="homePageFirstText">Periodic Table</string>
     <string name="homePageSecondText">Chemistry content</string>
     <string name="homePageThirdText">Settings</string>
