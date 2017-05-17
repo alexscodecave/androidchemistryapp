@@ -1,11 +1,17 @@
 package com.example.alexb.chemistryapplication;
 
 
+import android.content.ClipData;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 
 /**
@@ -18,11 +24,74 @@ public class atomsCompoundsQuestionThree extends Fragment {
         // Required empty public constructor
     }
 
+    LinearLayout outerLayout;
+    ImageView imgViewLeft;
+    ImageView imgViewCenter;
+    ImageView imgViewRight;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_atoms_compounds_question_three, container, false);
+
+        View v = inflater.inflate(R.layout.fragment_atoms_compounds_question_three, container, false);
+        outerLayout = (LinearLayout) v.findViewById(R.id.outerLayout);
+        imgViewLeft = (ImageView) v.findViewById(R.id.leftAtomForLithium);
+        imgViewCenter = (ImageView) v.findViewById(R.id.middleAtomForLithium);
+        imgViewRight = (ImageView) v.findViewById(R.id.rightAtomForLithium);
+        outerLayout.setOnDragListener(new View.OnDragListener() {
+            @Override
+            public boolean onDrag(View v, DragEvent event) {
+                final int action = event.getAction();
+                switch (action) {
+                    case DragEvent.ACTION_DRAG_STARTED:
+                        break;
+                    case DragEvent.ACTION_DRAG_EXITED:
+                        break;
+                    case DragEvent.ACTION_DRAG_ENTERED:
+                        break;
+                    case DragEvent.ACTION_DROP:
+                        Toast.makeText(getContext(), "Action dropped", Toast.LENGTH_SHORT).show();
+                }
+                return true;
+            }
+        });
+        imgViewLeft.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadow = new View.DragShadowBuilder(imgViewLeft);
+
+
+                v.startDragAndDrop(data, shadow, null, 0);
+
+
+                return false;
+            }
+        });
+        imgViewCenter.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowCenter = new View.DragShadowBuilder(imgViewCenter);
+                v.startDragAndDrop(data, shadowCenter, null, 0);
+                return false;
+            }
+        });
+
+        imgViewRight.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                ClipData data = ClipData.newPlainText("", "");
+                View.DragShadowBuilder shadowRight = new View.DragShadowBuilder(imgViewRight);
+                v.startDragAndDrop(data, shadowRight, null, 0);
+                return false;
+            }
+        });
+
+
+        return v;
     }
+
 
 }

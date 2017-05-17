@@ -16,4 +16,5 @@
     <color name="FDQuizMetalsPageTwo">#1abc9c</color>
     <color name="FDQuizAtomsCompoundsPageTwo">#e74c3c</color>
     <color name="FDSalmonYellow">#F4D03F</color>
+    <color name="redColor"> #ff0000</color>
 </resources>

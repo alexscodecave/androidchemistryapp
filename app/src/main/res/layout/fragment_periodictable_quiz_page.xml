@@ -2,18 +2,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/fragmentPeriodicTableContainer"
+    android:background="@color/FDGreen"
     android:layout_height="match_parent"
 
     tools:context="com.example.alexb.chemistryapplication.periodictableQuizPage">
 
-    <Button
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/FDQuizPageOne"
-        android:text="@string/quizPageOneHeading"
-        android:textColor="@color/FDWhite"
-        android:textSize="40dp"
-        android:id="@+id/btnQuizPeriodicTable"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/FDGreen"
+            android:text="@string/quizPageOneHeading"
+            android:textColor="@color/FDWhite"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/btnQuizPeriodicTable"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="115dp" />
+
+        <Button
+            android:id="@+id/btnPeriodicGoToPage2"
+            android:layout_width="match_parent"
+            android:text="Next question"
+            android:background="@color/FDGreen"
+            android:textColor="@color/FDWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            />
+
+
+    </RelativeLayout>
+
 
 
 </FrameLayout>

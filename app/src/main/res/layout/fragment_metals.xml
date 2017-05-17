@@ -5,13 +5,33 @@
     tools:context="com.example.alexb.chemistryapplication.Metals">
 
     <!-- TODO: Update blank fragment layout -->
-    <Button
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/quizPageThreeHeading"
-        android:textColor="@color/FDWhite"
-        android:id="@+id/metalButton"
-        android:textSize="40dp"
-        android:background="@color/FDQuizMetals" />
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/quizPageThreeHeading"
+            android:textColor="@color/FDWhite"
+            android:id="@+id/metalButton"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="@color/FDQuizMetals" />
+
+
+        <Button
+            android:id="@+id/btnMetalsGoToPage2"
+            android:layout_width="match_parent"
+            android:text="Next question"
+            android:background="@color/FDQuizMetals"
+            android:textColor="@color/FDWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            />
+
+    </RelativeLayout>
+
 
 </FrameLayout>

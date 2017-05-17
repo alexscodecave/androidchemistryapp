@@ -29,7 +29,7 @@ public class atomsCompoundsQuizPage extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v=  inflater.inflate(R.layout.fragment_atoms_compounds_quiz_page, container, false);
-        btnAtomsCompounds = (Button) v.findViewById(R.id.atomsCompounds);
+        btnAtomsCompounds = (Button) v.findViewById(R.id.btnAtomsGoToPage2);
         btnAtomsCompounds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +41,7 @@ public class atomsCompoundsQuizPage extends Fragment {
 
     public void switchFragment() {
 
-        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new periodicTableQuizPageTwo()).addToBackStack(null).commit();
+        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new atomsCompoundsQuizPageTwo()).addToBackStack(null).commit();
     }
 
 

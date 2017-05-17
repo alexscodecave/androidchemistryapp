@@ -16,6 +16,13 @@
     <string name="quizPageFourHeading">Acids and Alkalis</string>
     <string name="signedInGoogleAccount"></string>
 
+    <string name="firstQuestion">First question</string>
+    <string name="secondQuestion">Second question</string>
+    <string name="thirdQuestion">Third question</string>
+    <string name="previousQuestion">Previous question</string>
+    <string name="previousPage">Previous page</string>
+
+
 
     <string-array name="grouponeelements">
 

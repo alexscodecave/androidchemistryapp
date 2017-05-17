@@ -2,15 +2,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/FDQuizPageTwo"
     tools:context="com.example.alexb.chemistryapplication.atomsCompoundsQuizPage">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/quizPageTwoHeading"
+            android:textColor="@color/FDWhite"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/atomsCompounds"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="128dp" />
+
+        <Button
+            android:id="@+id/btnAtomsGoToPage2"
+            android:layout_width="match_parent"
+            android:text="Next question"
+            android:background="@color/FDQuizPageTwo"
+            android:textColor="@color/FDWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            />
+
+
+    </RelativeLayout>
     <!-- TODO: Update blank fragment layout -->
-<Button
-    android:layout_width="match_parent"
-    android:text="@string/quizPageTwoHeading"
-    android:background="@color/FDQuizPageTwo"
-    android:textColor="@color/FDWhite"
-    android:textSize="40dp"
-    android:id="@+id/atomsCompounds"
-    android:layout_height="match_parent" />
+
 </FrameLayout>

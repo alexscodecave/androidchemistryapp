@@ -2,16 +2,19 @@ package com.example.alexb.chemistryapplication;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,12 +45,16 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
 
     TextView txtViewOutputAccountName;
 
-
+    Button btnPeriodicGoBackHome;
     private boolean mResolvingConnectionFailure = false;
     private boolean mAutoStartSignInflow = true;
     private boolean mSignInClicked = false;
     RadioGroup periodicTablePageTwoRG;
     int selectedRGElement;
+    RadioButton periodicTableQ1A1;
+    RadioButton periodicTableQ1A2;
+    RadioButton periodicTableQ1A3;
+    TextView whetherUserCorrect;
 
 
     public periodicTableQuizPageTwo() {
@@ -60,23 +67,36 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_periodic_table_quiz_page_two, container, false);
         periodicTablePageTwoRG = (RadioGroup) v.findViewById(R.id.periodicTableRGQ1);
+        periodicTableQ1A1 = (RadioButton) v.findViewById(R.id.periodicTableQ1A1);
+        periodicTableQ1A2 = (RadioButton) v.findViewById(R.id.periodicTableQ1A2);
+        periodicTableQ1A3 = (RadioButton) v.findViewById(R.id.periodicTableQ1A3);
 
         googleApiClient = new GoogleApiClient.Builder(getContext())
                 .enableAutoManage(getActivity(), 0, this)
                 .addApi(Games.API).addScope(Games.SCOPE_GAMES)
                 .build();
 
+        whetherUserCorrect = (TextView) v.findViewById(R.id.whetherUserCorrect);
+
         btnSubmitAnswer = (Button) v.findViewById(R.id.btnQuestionTwo);
+        btnPeriodicGoBackHome = (Button) v.findViewById(R.id.btnPeriodicGoBackHome);
         btnSubmitAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Touched the submit button", Toast.LENGTH_SHORT).show();
                 selectedRGElement = periodicTablePageTwoRG.getCheckedRadioButtonId();
                 if (googleApiClient.isConnected()) {
-                    if (selectedRGElement == 0) {
+                    if (selectedRGElement == -1) {
+
+                        Toast.makeText(getContext(), "Please check an answer", Toast.LENGTH_SHORT).show();
+                    }
+                    else if (periodicTableQ1A1.isChecked()){
+                        ifAnswerCorrect();
                         Games.Achievements.unlock(googleApiClient, " CgkIv6L9ivQIEAIQAQ");
-                    } else {
-                        Toast.makeText(getContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                    } else if (periodicTableQ1A2.isChecked()) {
+                        ifAnswerIncorrect();
+                    }
+                    else if (periodicTableQ1A3.isChecked()) {
+                        ifAnswerIncorrect();
                     }
                 } else {
                     Toast.makeText(getContext(), "Api not online", Toast.LENGTH_SHORT).show();
@@ -84,36 +104,33 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
 
             }
         });
-        v.setOnTouchListener(new View.OnTouchListener() {
+
+        btnPeriodicGoBackHome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
-                        YAxisOne = event.getY();
-                        Toast.makeText(getContext(), "On click down", Toast.LENGTH_SHORT).show();
-                        break;
-                    case MotionEvent.ACTION_UP:
-                        YAxisTwo = event.getY();
-                        float OutcomeY = YAxisTwo - YAxisOne;
-                        if (Math.abs(OutcomeY) > MIN_DISTANCE) {
-                            if (YAxisTwo > YAxisOne) {
-                                Toast.makeText(getContext(), "Up to down", Toast.LENGTH_SHORT).show(); //this works!!!!
-                                switchFragment();
-                            } else {
-                                Toast.makeText(getContext(), "Down to up", Toast.LENGTH_SHORT).show(); //this works too!!!!
-
-                            }
-                        }
-                        break;
-                }
-                return true;
-
+            public void onClick(View v) {
+                switchFragment();
             }
-
         });
+
         return v;
 
+    }
 
+    public void ifAnswerCorrect(){
+        whetherUserCorrect.setVisibility(View.VISIBLE);
+        whetherUserCorrect.setBackgroundResource(R.color.FDGreen);
+        whetherUserCorrect.setText("Correct");
+        whetherUserCorrect.setTextSize(30);
+        whetherUserCorrect.setGravity(Gravity.CENTER);
+        whetherUserCorrect.setTextColor(Color.WHITE);
+    }
+    public void ifAnswerIncorrect(){
+        whetherUserCorrect.setVisibility(View.VISIBLE);
+        whetherUserCorrect.setBackgroundResource(R.color.redColor);
+        whetherUserCorrect.setText("Incorrect");
+        whetherUserCorrect.setTextSize(30);
+        whetherUserCorrect.setGravity(Gravity.CENTER);
+        whetherUserCorrect.setTextColor(Color.WHITE);
     }
 
     public void switchFragment() {
@@ -121,6 +138,10 @@ public class periodicTableQuizPageTwo extends Fragment implements GoogleApiClien
         getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup, R.anim.slidedown).replace(R.id.quizActivityLayout, new periodictableQuizPage()).addToBackStack(null).commit();
     }
 
+    public void switchFragmentPageThree() {
+
+        getFragmentManager().beginTransaction().setCustomAnimations(R.anim.slideup,R.anim.slidedown).replace(R.id.quizActivityLayout, new atomsCompoundsQuestionThree()).addToBackStack(null).commit();
+    }
 
     @Override
     public void onStart() {

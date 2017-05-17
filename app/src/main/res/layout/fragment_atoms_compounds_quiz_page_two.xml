@@ -2,15 +2,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/FDQuizAtomsCompoundsPageTwo"
+    android:background="@color/FDQuizPageTwo"
     tools:context="com.example.alexb.chemistryapplication.atomsCompoundsQuizPageTwo">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/FDWhite"
-        android:textSize="30dp"
-        android:text="compounds page 2" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnBackToPage1"
+            android:layout_width="match_parent"
+            android:text="Previous question"
+            android:background="@color/FDQuizPageTwo"
+            android:textColor="@color/FDWhite"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/FDWhite"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:text="Compounds page 2" />
+
+        <Button
+            android:id="@+id/btnAtomsGoToPage3"
+            android:layout_width="match_parent"
+            android:text="Next question"
+            android:background="@color/FDQuizPageTwo"
+            android:textColor="@color/FDWhite"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            />
+
+
+
+    </RelativeLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
 
 </FrameLayout>
