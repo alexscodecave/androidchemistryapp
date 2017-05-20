@@ -7,20 +7,18 @@
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="@color/FDQuizMetals"
         android:layout_height="match_parent">
-
-
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/quizPageThreeHeading"
             android:textColor="@color/FDWhite"
             android:id="@+id/metalButton"
             android:textSize="20dp"
+            android:layout_marginTop="110dp"
             android:gravity="center"
-            android:background="@color/FDQuizMetals" />
-
-
+             />
         <Button
             android:id="@+id/btnMetalsGoToPage2"
             android:layout_width="match_parent"

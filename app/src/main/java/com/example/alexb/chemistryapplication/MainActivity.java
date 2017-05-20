@@ -1,6 +1,7 @@
 package com.example.alexb.chemistryapplication;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton btnPeriodicTable;
@@ -26,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     SignInButton signInButton;
     TextView txtViewAccount;
     private static int RC_SIGN_IN = 9001;
+    Button btnSignOut;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         btnQuizContent = (ImageButton) findViewById(R.id.androidChemistryContent);
         btnSettings = (ImageButton) findViewById(R.id.androidSettings);
         txtViewAccount = (TextView) findViewById(R.id.txtViewAccount);
-
+        btnSignOut = (Button) findViewById(R.id.btnSignOut);
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
         GoogleSignInOptions googleSignIn = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -83,6 +87,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToSettingsPage);
             }
         });
+
+        btnSignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
+            }
+        });
     }
 
     private void signIn() {
@@ -94,9 +105,12 @@ public class MainActivity extends AppCompatActivity {
         if (result.isSuccess()) {
             GoogleSignInAccount account = result.getSignInAccount();
             Toast.makeText(this, "Signed in", Toast.LENGTH_SHORT).show();
-
+            isUserSignedIn(true);
+        } else {
+            isUserSignedIn(false);
         }
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -104,6 +118,27 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             handleSignInResult(result);
+        }
+    }
+
+
+    private void signOut() {
+        googleApiClient.connect();
+        if (googleApiClient.isConnected()) {
+            Auth.GoogleSignInApi.signOut(googleApiClient);
+            Toast.makeText(this, "Signed out", Toast.LENGTH_SHORT).show();
+            signInButton.setVisibility(View.VISIBLE);
+            btnSignOut.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void isUserSignedIn(boolean userSignedIn) {
+        if (userSignedIn) {
+            findViewById(R.id.sign_in_button).setVisibility(View.GONE);
+            findViewById(R.id.btnSignOut).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.btnSignOut).setVisibility(View.GONE);
+            findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
         }
     }
 

@@ -34,16 +34,15 @@
         android:id="@+id/periodicTableRGQ1"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_height="wrap_content" >
+        android:layout_height="194dp" >
 
         <RadioButton
             android:id="@+id/periodicTableQ1A1"
             android:layout_width="wrap_content"
             android:color="@color/FDWhite"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:layout_marginTop="10dp"
             android:textColor="@color/FDWhite"
             android:text="Halogens"
              />
@@ -52,7 +51,7 @@
             android:id="@+id/periodicTableQ1A2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:textSize="20dp"
             android:textColor="@color/FDWhite"
             android:text="Alkali metals" />
@@ -63,20 +62,20 @@
             android:layout_height="wrap_content"
             android:textColor="@color/FDWhite"
             android:textSize="20dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="20dp"
             android:text="Copper group"
             />
 
     </RadioGroup>
 
     <Button
-        android:layout_width="match_parent"
-        android:text="Submit answer"
-        android:textSize="20dp"
         android:id="@+id/btnQuestionTwo"
-        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/FDWhite"
-        android:layout_height="wrap_content" />
+        android:text="Submit answer"
+        android:textSize="20dp" />
+
     <TextView
         android:id="@+id/whetherUserCorrect"
         android:layout_width="match_parent"

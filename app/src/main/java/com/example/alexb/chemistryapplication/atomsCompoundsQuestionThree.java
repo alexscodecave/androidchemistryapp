@@ -2,6 +2,9 @@ package com.example.alexb.chemistryapplication;
 
 
 import android.content.ClipData;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.DragEvent;
@@ -39,19 +42,24 @@ public class atomsCompoundsQuestionThree extends Fragment {
         imgViewLeft = (ImageView) v.findViewById(R.id.leftAtomForLithium);
         imgViewCenter = (ImageView) v.findViewById(R.id.middleAtomForLithium);
         imgViewRight = (ImageView) v.findViewById(R.id.rightAtomForLithium);
+
         outerLayout.setOnDragListener(new View.OnDragListener() {
             @Override
             public boolean onDrag(View v, DragEvent event) {
                 final int action = event.getAction();
-                switch (action) {
+                switch(action){
                     case DragEvent.ACTION_DRAG_STARTED:
+                        Toast.makeText(getContext(), "action started", Toast.LENGTH_SHORT).show();
                         break;
                     case DragEvent.ACTION_DRAG_EXITED:
+                        Toast.makeText(getContext(), "action exited", Toast.LENGTH_SHORT).show();
                         break;
                     case DragEvent.ACTION_DRAG_ENTERED:
+                        Toast.makeText(getContext(), "action entered", Toast.LENGTH_SHORT).show();
                         break;
                     case DragEvent.ACTION_DROP:
                         Toast.makeText(getContext(), "Action dropped", Toast.LENGTH_SHORT).show();
+                        break;
                 }
                 return true;
             }
@@ -59,37 +67,30 @@ public class atomsCompoundsQuestionThree extends Fragment {
         imgViewLeft.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                ClipData data = ClipData.newPlainText("", "");
+                ClipData data = ClipData.newPlainText("","");
                 View.DragShadowBuilder shadow = new View.DragShadowBuilder(imgViewLeft);
-
-
-                v.startDragAndDrop(data, shadow, null, 0);
-
-
-                return false;
+                v.startDragAndDrop(data,shadow,null,0);
+                return true;
             }
         });
         imgViewCenter.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                ClipData data = ClipData.newPlainText("", "");
-                View.DragShadowBuilder shadowCenter = new View.DragShadowBuilder(imgViewCenter);
-                v.startDragAndDrop(data, shadowCenter, null, 0);
-                return false;
+                ClipData data = ClipData.newPlainText("","");
+                View.DragShadowBuilder shadow = new View.DragShadowBuilder(imgViewCenter);
+                v.startDragAndDrop(data,shadow,null,0);
+                return true;
             }
         });
-
         imgViewRight.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                ClipData data = ClipData.newPlainText("", "");
-                View.DragShadowBuilder shadowRight = new View.DragShadowBuilder(imgViewRight);
-                v.startDragAndDrop(data, shadowRight, null, 0);
-                return false;
+                ClipData data = ClipData.newPlainText("","");
+                View.DragShadowBuilder shadow = new View.DragShadowBuilder(imgViewRight);
+                v.startDragAndDrop(data,shadow,null,0);
+                return true;
             }
         });
-
-
         return v;
     }
 

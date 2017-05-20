@@ -237,11 +237,13 @@
                 android:layout_height="wrap_content"
                 android:background="@color/FDGreen"
                 android:text="Sr" />
+
             <Button
+                android:id="@+id/btnYttrium"
                 android:layout_width="50dp"
-                android:text="Y"
+                android:layout_height="wrap_content"
                 android:background="@color/FDGreen"
-                android:layout_height="wrap_content" />
+                android:text="Y" />
             <Button
                 android:layout_width="50dp"
                 android:text="Zr"

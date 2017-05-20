@@ -25,7 +25,10 @@ public class elementProfile extends Fragment {
     Integer[] elementImagesGroupOne = {R.drawable.hydrogenxxhdpi,R.drawable.lithiumxxhdpi,R.drawable.sodiumxxhdpi,
             R.drawable.potassiumxxhdpi,R.drawable.rubidiumxxhdpi,R.drawable.caesiumxxhdpi,R.drawable.franciumxxhdpi};
     Integer[] elementImagesGroupTwo = {R.drawable.berilliumxxhdpi,R.drawable.magnesiumxxhdpi,R.drawable.calciumxxhdpi,
-    R.drawable.strontiumxxhdpi,R.drawable.bariumxxhdpi};
+    R.drawable.strontiumxxhdpi,R.drawable.bariumxxhdpi,R.drawable.radiumxxhdpi};
+    Integer[] elementImagesGroupThree = {R.drawable.scandiumxxhdpi,R.drawable.yttriumxxhdpi};
+
+    Integer[] elementImagesGroupFour = {R.drawable.titaniumxxhdpi,R.drawable.zirconiumxxhdpi};
 
     public elementProfile() {
         // Required empty public constructor
@@ -34,10 +37,10 @@ public class elementProfile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-//        elementName = (TextView)getView().findViewById(R.id.elementName);
-//        elementAtomicNumber = (TextView)getView().findViewById(R.id.elementAtomicNumber);
-//        elementDescription = (TextView)getView().findViewById(R.id.elementDescription);
+
+        if (container != null) {
+            container.removeAllViews(); //remove views so fragment shows on screen instead of on top of activity
+        }
 
         View view = inflater.inflate(R.layout.fragment_element_profile, container, false);
         Bundle bundle = this.getArguments();
@@ -59,6 +62,11 @@ public class elementProfile extends Fragment {
             nameOfElementToImage("Calcium",elementImagesGroupTwo,2);
             nameOfElementToImage("Strontium",elementImagesGroupTwo,3);
             nameOfElementToImage("Barium",elementImagesGroupTwo,4);
+            nameOfElementToImage("Radium",elementImagesGroupTwo,5);
+            nameOfElementToImage("Scandium",elementImagesGroupThree,0);
+            nameOfElementToImage("Yttrium",elementImagesGroupThree,1);
+            nameOfElementToImage("Titanium",elementImagesGroupFour,0);
+            nameOfElementToImage("Zirconium",elementImagesGroupFour,1);
 
             elementName = (TextView) view.findViewById(R.id.elementNameFragment);
             elementName.setText("Element name: "+name);
@@ -92,5 +100,6 @@ public class elementProfile extends Fragment {
             imgView.setImageResource(imageArray[imageArrayIndex]);
         }
     }
+
 
 }

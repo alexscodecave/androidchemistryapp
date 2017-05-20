@@ -37,13 +37,21 @@
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:layout_weight="1"
-            android:background="@color/FDWhite"
+            android:background="@color/redColor"
             android:src="@drawable/chemistscomplete"
             android:textColor="@color/white" />
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+        <Button
+            android:id="@+id/btnSignOut"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sign out"
+            android:onClick="onClick"
             android:layout_height="wrap_content" />
 
         <TextView

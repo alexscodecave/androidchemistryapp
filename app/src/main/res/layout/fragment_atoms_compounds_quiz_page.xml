@@ -14,11 +14,11 @@
             android:textColor="@color/FDWhite"
             android:textSize="20dp"
             android:gravity="center"
-            android:id="@+id/atomsCompounds"
-            android:layout_height="200dp"
+            android:id="@+id/btnQuizPeriodicTable"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="128dp" />
+            android:layout_marginTop="115dp" />
 
         <Button
             android:id="@+id/btnAtomsGoToPage2"

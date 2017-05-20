@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,24 +13,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-
-
         <LinearLayout
-            android:layout_width="wrap_content"
             android:id="@+id/rowOne"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btnHydrogen"
                     android:layout_width="50dp"
-                    android:text="H"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDCrusta"
-                    android:layout_height="wrap_content" />
+                    android:text="H" />
 
                 <Button
                     android:id="@+id/btnHelium"
@@ -44,187 +43,212 @@
 
         <LinearLayout
             android:id="@+id/rowTwo"
-            android:layout_below="@id/rowOne"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_below="@id/rowOne"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btnLithium"
                     android:layout_width="50dp"
-                    android:text="Li"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Li" />
+
                 <Button
                     android:id="@+id/btnBeryllium"
                     android:layout_width="50dp"
-                    android:text="Be"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Be" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/rowThree"
-            android:layout_below="@id/rowTwo"
             android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowTwo"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btnSodium"
                     android:layout_width="50dp"
-                    android:text="Na"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Na" />
+
                 <Button
                     android:id="@+id/btnMagnesium"
                     android:layout_width="50dp"
-                    android:text="Mg"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Mg" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/rowFour"
-            android:layout_below="@id/rowThree"
             android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowThree"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btnPotassium"
                     android:layout_width="50dp"
-                    android:text="K"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="K" />
+
                 <Button
                     android:id="@+id/btnCalcium"
                     android:layout_width="50dp"
-                    android:text="Ca"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ca" />
+
                 <Button
                     android:id="@+id/btnScandium"
                     android:layout_width="50dp"
-                    android:text="Sc"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Sc" />
+
                 <Button
                     android:id="@+id/btnTitanium"
                     android:layout_width="50dp"
-                    android:text="Ti"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ti" />
+
                 <Button
                     android:id="@+id/btnVandium"
                     android:layout_width="50dp"
-                    android:text="V"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="V" />
+
                 <Button
                     android:id="@+id/btnChromium"
                     android:layout_width="50dp"
-                    android:text="Cr"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Cr" />
+
                 <Button
                     android:id="@+id/btnManganese"
                     android:layout_width="50dp"
-                    android:text="Mn"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Mn" />
+
                 <Button
                     android:id="@+id/btnIron"
                     android:layout_width="50dp"
-                    android:text="Fe"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Fe" />
+
                 <Button
                     android:id="@+id/btnCobalt"
                     android:layout_width="50dp"
-                    android:text="Co"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Co" />
+
                 <Button
                     android:id="@+id/btnNickel"
                     android:layout_width="50dp"
-                    android:text="Ni"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ni" />
+
                 <Button
                     android:id="@+id/btnCopper"
                     android:layout_width="50dp"
-                    android:text="Cu"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Cu" />
+
                 <Button
                     android:id="@+id/btnZinc"
                     android:layout_width="50dp"
-                    android:text="Zn"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Zn" />
+
                 <Button
                     android:id="@+id/btnGallium"
                     android:layout_width="50dp"
-                    android:text="Ga"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ga" />
+
                 <Button
                     android:id="@+id/btnGermanium"
                     android:layout_width="50dp"
-                    android:text="Ge"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDBlue"
-                    android:layout_height="wrap_content" />
+                    android:text="Ge" />
+
                 <Button
                     android:id="@+id/btnArsenic"
                     android:layout_width="50dp"
-                    android:text="As"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDBlue"
-                    android:layout_height="wrap_content" />
+                    android:text="As" />
+
                 <Button
                     android:id="@+id/btnSelenium"
                     android:layout_width="50dp"
-                    android:text="Se"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDCrusta"
-                    android:layout_height="wrap_content" />
+                    android:text="Se" />
+
                 <Button
                     android:id="@+id/btnBromine"
                     android:layout_width="50dp"
-                    android:text="Br"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDCrusta"
-                    android:layout_height="wrap_content" />
+                    android:text="Br" />
+
                 <Button
                     android:id="@+id/btnKrypton"
                     android:layout_width="50dp"
-                    android:text="Kr"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDCrusta"
-                    android:layout_height="wrap_content" />
+                    android:text="Kr" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/rowFive"
-            android:layout_below="@id/rowFour"
             android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowFour"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnRubidium"
@@ -239,99 +263,117 @@
                     android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
                     android:text="Sr" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Y"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Y" />
+
                 <Button
+                    android:id="@+id/btnZirconium"
                     android:layout_width="50dp"
-                    android:text="Zr"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Zr" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Nb"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Nb" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Mo"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Mo" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Tc"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Tc" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Ru"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ru" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Rh"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Rh" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Pd"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Pd" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Ag"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ag" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Cd"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Cd" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="In"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="In" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Sn"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Sn" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Sb"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDBlue"
-                    android:layout_height="wrap_content" />
+                    android:text="Sb" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Te"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDBlue"
-                    android:layout_height="wrap_content" />
+                    android:text="Te" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="I"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDCrusta"
-                    android:layout_height="wrap_content" />
+                    android:text="I" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Xe"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDCrusta"
-                    android:layout_height="wrap_content" />
+                    android:text="Xe" />
             </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/rowSix"
-            android:layout_below="@id/rowFive"
             android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowFive"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnCaesium"
@@ -346,100 +388,116 @@
                     android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
                     android:text="Ba" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="La"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="La" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Hf"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Hf" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Ta"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ta" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="W"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="W" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Re"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Re" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Os"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Os" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Ir"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ir" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Pt"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Pt" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Au"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Au" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Hg"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Hg" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Ti"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ti" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Pb"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Pb" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Bi"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Bi" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Po"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Po" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="At"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDBlue"
-                    android:layout_height="wrap_content" />
+                    android:text="At" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Rn"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDCrusta"
-                    android:layout_height="wrap_content" />
+                    android:text="Rn" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/rowSeven"
-            android:layout_below="@id/rowSix"
             android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rowSix"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnFrancium"
@@ -454,41 +512,48 @@
                     android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
                     android:text="Ra" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Ac**"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Ac**" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Db"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Db" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="JI"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="JI" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Rf"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Rf" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Bh"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Bh" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Hn"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Hn" />
+
                 <Button
                     android:layout_width="50dp"
-                    android:text="Mt"
+                    android:layout_height="wrap_content"
                     android:background="@color/FDGreen"
-                    android:layout_height="wrap_content" />
+                    android:text="Mt" />
             </LinearLayout>
         </LinearLayout>
 
@@ -496,10 +561,10 @@
             android:id="@+id/button8"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="@color/FDCrusta"
-            android:text="Ne"
             android:layout_below="@+id/rowOne"
-            android:layout_toEndOf="@+id/button15" />
+            android:layout_toEndOf="@+id/button15"
+            android:background="@color/FDCrusta"
+            android:text="Ne" />
 
         <Button
             android:id="@+id/button9"
@@ -536,6 +601,7 @@
             android:layout_below="@+id/rowOne"
             android:layout_toStartOf="@+id/button11"
             android:background="@color/FDCrusta"
+            android:onClick="onClick"
             android:text="C" />
 
         <Button
@@ -552,10 +618,10 @@
             android:id="@+id/button14"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:background="@color/FDCrusta"
-            android:text="Ar"
+            android:layout_alignEnd="@+id/rowFour"
             android:layout_below="@+id/button8"
-            android:layout_alignEnd="@+id/rowFour" />
+            android:background="@color/FDCrusta"
+            android:text="Ar" />
 
         <Button
             android:id="@+id/button15"
@@ -608,5 +674,4 @@
     </RelativeLayout>
 
 
-
-</LinearLayout>
+</FrameLayout>

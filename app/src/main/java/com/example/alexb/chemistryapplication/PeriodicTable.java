@@ -21,13 +21,6 @@ import java.util.ArrayList;
 
 public class PeriodicTable extends FragmentActivity implements View.OnClickListener{
 
-    Button[] rowOneButtons = new Button[2]; //hydrogen and helium
-    Button[] rowTwoButtons = new Button[8]; //Lithium and bellium
-    Button[] rowThreeButtons = new Button[8];
-    Button[] rowFourButtons = new Button[18];
-    Button[] rowFiveButtons = new Button[18];
-    Button[] rowSixButtons = new Button[18];
-    Button[] rowSevenButtons = new Button[9];
 
     //Column One of periodic table
     Button btnHydrogen;
@@ -42,6 +35,11 @@ public class PeriodicTable extends FragmentActivity implements View.OnClickListe
     Button btnCalcium;
     Button btnStronium;
     Button btnBarium;
+    Button btnRadium;
+    Button btnScandium;
+    Button btnYttrium;
+    Button btnTitanium;
+    Button btnZirconium;
 
     private ImageView imgView;
 
@@ -59,7 +57,6 @@ public class PeriodicTable extends FragmentActivity implements View.OnClickListe
         btnPotassium = (Button) findViewById(R.id.btnPotassium);
         btnRubidium = (Button) findViewById(R.id.btnRubidium);
         btnCaesium = (Button) findViewById(R.id.btnCaesium);
-        btnFrancium = (Button) findViewById(R.id.btnFrancium);
         //column 2
         btnBerrilium = (Button) findViewById(R.id.btnBeryllium);
         btnMagnesium = (Button) findViewById(R.id.btnMagnesium);
@@ -67,20 +64,34 @@ public class PeriodicTable extends FragmentActivity implements View.OnClickListe
         btnStronium = (Button) findViewById(R.id.btnStronium);
         btnBarium = (Button) findViewById(R.id.btnBarium);
         btnFrancium = (Button) findViewById(R.id.btnFrancium);
+        btnRadium = (Button) findViewById(R.id.btnRadium);
+        //column 3
+        btnScandium = (Button) findViewById(R.id.btnScandium);
+        btnYttrium = (Button) findViewById(R.id.btnYttrium);
 
-        btnHydrogen.setOnClickListener(onClickListener);
-        btnLithium.setOnClickListener(onClickListener);
-        btnSodium.setOnClickListener(onClickListener);
-        btnPotassium.setOnClickListener(onClickListener);
-        btnRubidium.setOnClickListener(onClickListener);
-        btnCaesium.setOnClickListener(onClickListener);
-        btnFrancium.setOnClickListener(onClickListener);
+        //column 4
+        btnTitanium = (Button) findViewById(R.id.btnTitanium);
+        btnZirconium = (Button) findViewById(R.id.btnZirconium);
+
+
+
+        btnOnClickListener(btnHydrogen);
+        btnOnClickListener(btnLithium);
+        btnOnClickListener(btnSodium);
+        btnOnClickListener(btnPotassium);
+        btnOnClickListener(btnRubidium);
+        btnOnClickListener(btnCaesium);
+        btnOnClickListener(btnFrancium);
         btnOnClickListener(btnBerrilium);
         btnOnClickListener(btnMagnesium);
         btnOnClickListener(btnCalcium);
         btnOnClickListener(btnStronium);
         btnOnClickListener(btnBarium);
         btnOnClickListener(btnFrancium);
+        btnOnClickListener(btnScandium);
+        btnOnClickListener(btnYttrium);
+        btnOnClickListener(btnTitanium);
+        btnOnClickListener(btnZirconium);
     }
     private View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
@@ -122,14 +133,20 @@ public class PeriodicTable extends FragmentActivity implements View.OnClickListe
                 case R.id.btnBarium:
                     passDataToFragment("elementName","Barium","elementAN","4","elementDesc","Barium description");
                     break;
-
-
-
-
-
-
-
-
+                case R.id.btnRadium:
+                    passDataToFragment("elementName","Radium","elementAN","88","elementDesc","Francium description");
+                    break;
+                case R.id.btnScandium:
+                    passDataToFragment("elementName","Scandium","elementAN","21","elementDesc","Scandium description");
+                    break;
+                case R.id.btnYttrium:
+                    passDataToFragment("elementName","Yttrium","elementAN","39","elementDesc","Scandium description");
+                    break;
+                case R.id.btnTitanium:
+                    passDataToFragment("elementName","Titanium","elementAN","39","elementDesc","Titanium description");
+                    break;
+                case R.id.btnZirconium:
+                    passDataToFragment("elementName","Zirconium","elementAN","39","elementDesc","Titanium description");
 
             }
         }
@@ -153,22 +170,21 @@ public class PeriodicTable extends FragmentActivity implements View.OnClickListe
         fragmentTransaction.commit();
     }
 
-    private void specificButtonClicked(Button btnName){
-        btnName.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-    }
-
     private void btnOnClickListener(Button b){
         b.setOnClickListener(onClickListener);
     }
 
-
     @Override
     public void onClick(View v) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(getFragmentManager().getBackStackEntryCount()>0){
+            getSupportFragmentManager().popBackStackImmediate();
+        }else{
+            super.onBackPressed();
+        }
     }
 }

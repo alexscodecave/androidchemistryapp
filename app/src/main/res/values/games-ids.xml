@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="app_id">306039443775</string>
     <string name="package_name">com.example.alexb.chemistryapplication</string>
     <string name="achievement_never_trust_an_atom_they_make_up_everything.">CgkIv6L9ivQIEAIQAQ</string>
 </resources>

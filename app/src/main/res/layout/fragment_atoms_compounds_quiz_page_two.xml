@@ -23,9 +23,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/FDWhite"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:gravity="center"
-            android:text="Compounds page 2" />
+            android:text="Enter question here" />
 
         <Button
             android:id="@+id/btnAtomsGoToPage3"

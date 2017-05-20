@@ -25,7 +25,7 @@
     <TextView
         android:text="@string/periodictablerevisionq1"
         android:textColor="@color/FDWhite"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -34,7 +34,6 @@
         android:id="@+id/periodicTableRGQ1"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:orientation="vertical"
         android:layout_height="wrap_content" >
 
         <RadioButton
@@ -43,7 +42,6 @@
             android:color="@color/FDWhite"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:layout_marginTop="10dp"
             android:textColor="@color/FDWhite"
             android:text="Halogens"
              />
